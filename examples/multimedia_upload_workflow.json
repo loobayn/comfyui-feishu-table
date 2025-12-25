@@ -1,0 +1,115 @@
+{
+  "last_node_id": 6,
+  "last_link_id": 5,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "FeishuConfigNode",
+      "pos": [100, 100],
+      "size": {"0": 300, "1": 200},
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": {
+        "app_id": "cli_a8137df47f38501c",
+        "app_secret": "your_app_secret_here",
+        "table_url": "https://fqrqkwpqx5.feishu.cn/base/CSPQbCY1OazvLnsxgWicJg?table=tblPlnQ7x0dYGWC8&view=vew5tYVpod"
+      },
+      "title": "配置节点（飞书）",
+      "properties": {},
+      "widgets_values": [
+        "cli_a8137df47f38501c",
+        "your_app_secret_here",
+        "https://fqrqkwpqx5.feishu.cn/base/CSPQbCY1OazvLnsxgWicJg?table=tblPlnQ7x0dYGWC8&view=vew5tYVpod"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "FeishuVideoUploadNode",
+      "pos": [500, 100],
+      "size": {"0": 400, "1": 300},
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": {
+        "feishu_config": ["1", 0],
+        "target_columns": "附件\n多媒体文件",
+        "filter_condition": "状态+进行中",
+        "create_new_rows": true,
+        "new_rows_count": 2
+      },
+      "title": "上传多媒体（飞书多维表格）",
+      "properties": {},
+      "widgets_values": [
+        ["1", 0],
+        "附件\n多媒体文件",
+        "状态+进行中",
+        true,
+        2
+      ]
+    },
+    {
+      "id": 3,
+      "type": "LoadVideo",
+      "pos": [100, 400],
+      "size": {"0": 300, "1": 200},
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": {},
+      "title": "加载视频",
+      "properties": {},
+      "widgets_values": ["video.mp4"]
+    },
+    {
+      "id": 4,
+      "type": "LoadImage",
+      "pos": [100, 700],
+      "size": {"0": 300, "1": 200},
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": {},
+      "title": "加载图片",
+      "properties": {},
+      "widgets_values": ["image.jpg"]
+    },
+    {
+      "id": 5,
+      "type": "SaveVideo",
+      "pos": [500, 400],
+      "size": {"0": 300, "1": 200},
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": {
+        "video": ["2", 0]
+      },
+      "title": "保存视频",
+      "properties": {},
+      "widgets_values": ["output_video.mp4"]
+    },
+    {
+      "id": 6,
+      "type": "SaveImage",
+      "pos": [500, 700],
+      "size": {"0": 300, "1": 200},
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": {
+        "images": ["2", 1]
+      },
+      "title": "保存图片",
+      "properties": {},
+      "widgets_values": ["output_image.jpg"]
+    }
+  ],
+  "links": [
+    [1, 1, 0, 2, 0],
+    [2, 3, 0, 2, 1],
+    [3, 2, 0, 5, 0],
+    [4, 2, 1, 6, 0]
+  ]
+}
+

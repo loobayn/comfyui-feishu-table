@@ -1,0 +1,38 @@
+{
+  "name": "comfyui-feishu-table",
+  "version": "1.0.0",
+  "description": "ComfyUI插件，用于获取飞书多维表格内容并进行筛选",
+  "author": "ComfyUI Community",
+  "main": "__init__.py",
+  "keywords": [
+    "comfyui",
+    "feishu",
+    "table",
+    "bitable",
+    "api"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/comfyui-feishu-table.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/comfyui-feishu-table/issues"
+  },
+  "homepage": "https://github.com/your-username/comfyui-feishu-table#readme",
+  "dependencies": {
+    "requests": ">=2.25.1",
+    "urllib3": ">=1.26.0"
+  },
+  "comfyui_requirements": {
+    "python": ">=3.8",
+    "comfyui": ">=1.0.0"
+  },
+  "features": [
+    "飞书多维表格数据获取",
+    "列筛选",
+    "条件筛选",
+    "多种输出格式",
+    "分页支持"
+  ]
+}
